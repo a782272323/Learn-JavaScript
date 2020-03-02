@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Herbe Leung</title>
+    <script>
+        // 类型转换
+
+        // 其他类型转数字类型：三种
+        // 第一种: parseInt(); 转整数,不保留小数，下面10s这些在java中会报错的
+        console.log(parseInt("10")); // 10
+        console.log(parseInt("10s")); // 10
+        console.log(parseInt("d10")); // NaN
+        console.log(parseInt("1sdf0")); // 1
+        console.log(parseInt("10.15")); // 10
+        console.log(parseInt("10.15s")); // 10
+        // 第二种： parseFloat(); 转小数,保留整数和小数
+        console.log(parseFloat("10")); // 10
+        console.log(parseFloat("10s")); // 10
+        console.log(parseFloat("d10")); // NaN
+        console.log(parseFloat("1sdf0")); // 1
+        console.log(parseFloat("10.15")); // 10.15
+        console.log(parseFloat("10.15s")); // 10.15
+        // 第三种: Number(); 转数字（包括整数和小数)
+        console.log(Number("10")); // 10
+        console.log(Number("10s")); // NaN
+        console.log(Number("d10")); // NaN
+        console.log(Number("1sdf0")); // NaN
+        console.log(Number("10.15")); // 10.15
+        console.log(Number("10.15s")); // NaN
+
+
+        // 其他类型转字符串类型
+        // 方法一: .toString()
+        var num = 10;
+        console.log(num.toString()); // 控制台颜色变灰色说明是字符串了
+        // 方法二: String()
+        var num1 = 20;
+        console.log(String(num1));
+        // 若果变量有意义调用.toString转换
+        // 如果变量没有意义调用String（）转换
+        var num3;
+        // console.log(num3.toString()); // 控制台会报错
+        console.log(String(num3)); // undefined
+        var num4=null;
+        // console.log(num4.toString()); // 控制台会报错
+        console.log(String(num4)); // null
+
+        // 其他类型转布尔类型
+        console.log(Boolean(1)); // true
+        console.log(Boolean(0)); // false
+        console.log(Boolean(11)); // true
+        console.log(Boolean(-11)); // true
+        console.log(Boolean("哈哈")); // true
+        console.log(Boolean(null)); // false
+        console.log(Boolean(undefined)); // false
+
+        // 整数和负数
+        var str = 10;
+        console.log("正数 = " + str);
+        console.log("负数 = " + -str);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

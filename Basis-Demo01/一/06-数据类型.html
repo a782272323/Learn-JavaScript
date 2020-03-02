@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Herbie Leung</title>
+    <script>
+
+        /**
+         * js原始数据类型：number,string,boolean,null,undefined,object
+         * number: 数字类型（整数和小数）
+         * string: 字符串类型（双引号或者单引号括起来）
+         * boolean: 布尔类型（true 或者 false）
+         * null: 空类型，
+         * undefined: 未定义，值只有一个: undefined, 当变量声明但没有初始化或者赋值时，打印控制台输出但值是 undefined
+         * object: 对象
+         */
+
+        // undefined
+        var num;
+        console.log("num = ", num); // undefined
+        var num1;
+        console.log("num1 = ", num1 + 10); // NaN,不是数字，相加失败
+
+        /**
+         * 获取变量的数据类型
+         * 使用typeof 来获取
+         * typeof 变量名
+         * typeof（变量名）
+         */
+        var num2 = 10;
+        var str = "小斌";
+        var flag = true;
+        var nll = null;
+        var undef;
+        var obj = new Object();
+        console.log("使用 typeof 获取变量的数据类型")
+        console.log("num2 的数据类型 = ", typeof num2); // number
+        console.log("str 的数据类型 = ", typeof (str)); // string
+        console.log("flag 的数据类型 = ", typeof flag); // boolean
+        console.log("nll 的数据类型 = ", typeof (nll)); // object
+        console.log("undef 的数据类型 = ", typeof undef); // undefined
+        console.log("obj 的数据类型 = ", typeof (obj)); // object
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

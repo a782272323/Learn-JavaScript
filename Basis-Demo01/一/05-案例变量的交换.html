@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Herbie Leung</title>
+    <script>
+        // 变量的交换
+        // 方法一：使用第三方变量辅助交换
+        var num1 = 10;
+        var num2 = 20;
+        console.log("变量交换前:");
+        console.log("num1 = ", num1);
+        console.log("num2 = ", num2);
+        var temp;
+        var temp = num1;
+        num1 = num2;
+        num2 = temp;
+        console.log("变量交换后:");
+        console.log("num1 = ", num1);
+        console.log("num2 = ", num2);
+
+        // 方法二：一般适用于数字的交换
+        var number1 = 10;
+        var number2 = 20;
+        console.log("变量交换前:");
+        console.log("number1 = ", number1);
+        console.log("number2 = ", number2);
+        number1 = number1 + number2; // 30
+        number2 = number1 - number2; // 10
+        number1 = number1 - number2; // 20
+        console.log("变量交换后:");
+        console.log("number1 = ", number1);
+        console.log("number2 = ", number2);
+
+        // 方法三: 也是适用于数字的交换
+        var n1 = 10;
+        var n2 = 20;
+        console.log("变量交换前:");
+        console.log("n1 = ", n1);
+        console.log("n2 = ", n2);
+        n1 = n1 ^ n2;
+        n2 = n1 ^ n2;
+        n1 = n1 ^ n2;
+        console.log("变量交换后:");
+        console.log("n1 = ", n1);
+        console.log("n2 = ", n2);
+
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>

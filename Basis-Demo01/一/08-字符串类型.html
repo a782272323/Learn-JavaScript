@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Herbie Leung</title>
+    <script>
+        // 字符串支持双引号和单引号
+        var str = "10";
+        var str2 = '20';
+
+        var str3 = "梁鸿斌很帅";
+        var str4 = "Nice to meet you, my son !"
+        // 字符串的个数有多少？变量名.length
+        console.log("统计字符串str4的长度: ", str4.length);
+
+        // html中的转义符： <&lt;> &gt; 空格; &nbsp;
+        // js的字符串也有转义符
+
+        // tab键     水平制表符
+        console.log("水平制表符: 你好\t他好");
+        // 具体的转义符和java中的大同小异
+
+
+        // 字符串的拼接
+        var str5 = "您好";
+        var str6 = "他好";
+        console.log(str5 + str6);
+        console.log("你" + "我" + "他");
+        // 只要有一个字符串，其他是数字，使用+号，表示的是字符串拼接不是相加，不发生计算
+        // 只要有一个字符串，其他是数字，使用-号，发生计算
+        var str7 = 10;
+        var str8 = "20";
+        console.log(str7 + str8);
+        var str9 = "10";
+        var str10 = 5;
+        // 浏览器自动把数据类型转换成了number，叫做隐式转换
+        console.log(str9 - str10);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

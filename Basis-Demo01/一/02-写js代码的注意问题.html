@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Herbie Leung</title>
+</head>
+<body>
+    <script>
+        // js代码注意问题
+        /**
+         * 1.在一对script的标签中，有错误的js代码，后面的正确也不会执行,范围仅在当前script中
+         * 2.不会影响别的script标签的js代码
+         * 3. script标签中的属性(以下两种的标题都可以省略)
+         *      a.type="text/javascript" 标准写法
+         *      b.language="JavaScript" 另一种写法
+         * 4.script标签可以同时写type和language，是为了反正浏览器解析不出错
+         */
+        alert("哈哈；
+        alert("嘿嘿");
+    </script>
+
+    <script>
+        // alert("测试不错误的script标签");
+    </script>
+
+    <!-- script 标签中的属性 -->
+    <script type="text/javascript">
+        // alert("hh");
+    </script>
+    <script language="JavaScript">
+        alert("xx");
+    </script>
+</body>
+</html>

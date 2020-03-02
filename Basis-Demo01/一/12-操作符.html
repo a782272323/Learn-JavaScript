@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Herbie Leung</title>
+    <script>
+        /**
+         * 操作符
+         * 操作数： 可以是变量和数字
+         * 算数运算符:    + - * / %
+         * 算数运算表达式:  由算数运算符连接起来的表达式 var num = 10;
+         * 一元运算符: ++ -- 该操作符只需要一个操作数， var num = 10++;
+         * 二元运算符: + - * / % 该操作符需要两个操作数, var num = num + 10;
+         * 三元运算符: 需要三个操作数（暂时不理会，后面会补）
+         * 复合运算符: += -= *= /= %=
+         * 复合运算表达式： 由复合运算符连接起来的表达式 num1+=10;
+         * 关系运算符: > < >= <= ==(等于,不严格) ===(恒等于，严格） !=(不等于，不严格) !==（不等于，严格）
+         * 关系运算表达式： 由关系运算符连接起来的表达式 str1 === num2, 1<2,结果是布尔类型
+         * 逻辑运算符: &&(与) ||(或) !(非)
+         * 逻辑运算表达式： 由逻辑运算符连接起来的表达式
+         *
+         * == 与 === 的区别： == 只进行值比较， === 当值和类型相等时相等
+         */
+        // 算数运算符
+        var num = 10;
+        var result = num % 3;// 取余
+        console.log("取余数 ", result);
+        var result1 = num / 3;
+        console.log("除 ", result1);
+        console.log("只取整数",parseInt(result1));
+
+        // 复合运算符
+        var num1 = 10;
+        num1+=10; // num = num + 10
+        console.log(num1);
+
+        // 关系运算符
+        var str1 = "5";
+        var num2 = 5;
+        console.log("严格的： ", str1 === num2);
+        console.log("不严格的： ", str1 == num2);
+        console.log(5 > 10); // false
+        console.log(5 >= 5); // true
+        console.log(5 > 3); // true
+        console.log(5 == 10); // true
+
+        // 逻辑运算符
+        var num3 = 10;
+        var num3 = 20;
+        console.log(num1 == num2 && 5 > 6); // false
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

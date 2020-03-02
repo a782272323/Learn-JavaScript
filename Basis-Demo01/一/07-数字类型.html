@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Herbie Leung"</title>
+    <script>
+        /**
+         * 数字类型: 整数和小数
+         *
+         * num = 20; 整数
+         * num = 98.76; 小数
+         * js所有的数字都属于number类型
+         * 不像java 分int Long float
+         *
+         * 数字：
+         * 二进制
+         * 八进制
+         * 十进制
+         * 十六进制
+         *
+         * var num = 10; // 十进制
+         * var num1 = 012; // 八进制
+         * var num3 = 0x123; // 十六进制
+         */
+
+        var num = 12;
+        var num1 = 012;
+        var num2 = 0x12;
+        console.log("十进制数 12 = ", num);
+        console.log("八进制数 12 = ", num1);
+        console.log("十六进制数 12 = ", num2);
+    </script>
+
+    <script>
+
+        // 数据类型有范围： 最小值和最大值
+        console.log("最大值", Number.MAX_VALUE);
+        console.log("最小值", Number.MIN_VALUE);
+
+        // 不要用小数去验证小数，这是一个bug，没办法的事情
+        var x = 0.1;
+        var y = 0.2;
+        var sum = x + y;
+        console.log(sum); // 0.300000000004
+        console.log("sum 是否等于 0.3 ? ", sum == 0.3);
+
+        // 不要用Nan验证是不是NaN
+        var num3;
+        console.log(num3 + 10 == NaN);
+        console.log("您好" == "他好");
+
+        // 如何验证结果是不是NaN，使用isNan（）,true 不是一个数字，false是一个数字
+        var num4;
+        console.log(isNaN(num4));
+        console.log(isNaN(10));
+    </script>
+
+
+</head>
+<body>
+
+</body>
+</html>
