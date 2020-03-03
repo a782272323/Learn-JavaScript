@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Herbie Leung</title>
+    <script>
+        // 循环: 一件事不停的，重复的做
+        // 循环要有结束的条件，和计数器
+
+        /**
+         * while 循环
+         *
+         * 语法:
+         *
+         * 计数器
+         * var 变量 = 0;
+         * while(循环的条件) {
+         *     循环体;
+         *     计数器++;
+         * }
+         *
+         * 执行过程：
+         * 先判断条件是否成立，如果是false，循环体的代码都不执行
+         * 如果是true，先执行循环体，再执行计数器，接着又判断条件是否成立
+         * 继续循环到循环的条件不成立才跳出循环
+         *
+         * var i = 0;
+         * while(i<20)  {
+         *     循环体
+         *     i++;
+         * }
+         */
+
+        var i = 0;
+        while (i < 1) {
+            console.log("您好，哈哈" + i);
+            i++;
+        }
+
+        // 计算1-100所有数字的和
+        var n = 0;
+        var sum = 0;
+        while (n <= 100) {
+            sum += n;
+            n++;
+        }
+        console.log("sum = ", sum);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

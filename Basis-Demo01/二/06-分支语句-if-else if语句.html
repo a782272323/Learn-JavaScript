@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Herbie Leung</title>
+    <script>
+
+        /**
+         * if语句只有一个分支
+         * if-else 语句有两个分支，最终只执行一个
+         * if-else if-else if-else if-else if ..... else..多分支，最终只执行一个
+         *
+         * 语法：
+         * if(表达式1）{
+         *     代码1
+         * } else if(表达式2）{
+         *     代码2
+         * } else if(表达式3）{
+         *     代码3
+         * } else {
+         *     代码 4
+         * }
+         *
+         * 执行过程:
+         * 先判断表达式1的结果，为true，执行代码1
+         * 如果表达式1为false，判断表达式2
+         * 如果表达式2为，true，执行代码2
+         * 如果表达式2为false，判断表达式3
+         * 如果表达式3为true，执行代码3
+         * 如果表达式3为false，执行代码4
+         */
+
+        /**
+         * 成绩在90-100，显示A级
+         * 成绩在80-90，显示B级
+         * 成绩在78-80，显示C级
+         * 成绩在60-79，显示D级
+         * 成绩在0-60，显示E级
+         */
+
+        var score = Number(prompt("请输入您的成绩"));
+        if (isNaN(score)) {
+            // 如果为true，说明score不是数字
+            console.log("您输入了错误的格式，请输入正确的");
+        } else {
+
+            if (score > 90 && score <= 100) {
+                console.log("A级");
+            } else if (score > 80 && score <= 90) {
+                console.log("B级");
+            } else if (score > 70 && score <= 80) {
+                console.log("C级别");
+            } else if (score > 60 && score <= 70) {
+                console.log("D级");
+            } else {
+                console.log("E级别");
+            }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

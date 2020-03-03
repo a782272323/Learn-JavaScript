@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Herbie Leung</title>
+    <script>
+        /**
+         *
+         * ++ -- 都是运算符
+         * 可以分为 ++num num++ --num num--
+         *
+         * 如果++在后面： 如 num++ +10参与运算，先参与运算，运算结束后再加1
+         * 如果++在前面， 如 ++num +10参与运算，num先+1再参与运算
+         * --同理
+         */
+
+        var num = 10;
+        num++;
+        console.log("num++ =", num); // 11
+        var num1 = 10;
+        ++num1;
+        console.log("num1++ =", num1); // 11
+
+        var num2 = 10;
+        console.log("参与运算前 num2 = ", num2);
+        var sum = num2++ +10;
+        console.log("sum = num2++ +10 = ", sum); // 20
+        console.log("参与运算后 num2 = ", num2);
+        var num3 = 10;
+        var sum1 = ++num3 +10;
+        console.log("sum1 = ++num3 +10 = ", sum1); // 21
+        console.log("参与运算后 num3 = ", num3);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

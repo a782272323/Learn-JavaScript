@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Herbie Leung</title>
+    <script>
+
+        /**
+         *
+         * switch-case 语句，多分支
+         *
+         * 语法:
+         * switch(表达式){
+         *     case 值1: 代码1; break;
+         *     case 值2: 代码2; break;
+         *     case 值3: 代码3; break;
+         *     case 值4: 代码4; break;
+         *     ... 多个case
+         *     default: 代码5;
+         * }
+         *
+         * 执行过程:
+         * 获取表达式的值，和值1比较，如果一样，执行代码1，遇到break跳出整个语句,后面代码不执行
+         * 如果表达式的值和值1不一样，则和值2比较，如果一样，执行代码2，遇到break跳出整个语句,后面代码不执行
+         * 如果表达式的值和值2不一样，则和值3比较，如果一样，执行代码3，遇到break跳出整个语句,后面代码不执行
+         * 如果表达式的值和值3不一样，则和值4比较，如果一样，执行代码4，遇到break跳出整个语句,后面代码不执行
+         * 否则，执行default的代码5
+         */
+
+        /**
+         * 如果成绩为A级别，显示90-100的分数
+         * 如果成绩为B级别，显示80-90的分数
+         * 如果成绩为C级别，显示70-80的分数
+         * 如果成绩为D级别，显示60-70的分数
+         * 如果成绩为E级别，显示0-59的分数
+         */
+
+        var jiBie="C";
+        switch (jiBie) {
+            case "A": console.log("90-100之间");break;
+            case "B": console.log("80-90之间");break;
+            case "C": console.log("70-80之间");break;
+            case "D": console.log("60-70之间");break;
+            default: console.log("0-59之间");
+
+        }
+
+        // 注意问题
+        // switch-case比较用的是恒等于的严格比较模式
+        // case 后面不带 break;则默认会执行下一个case
+        var num="10"; // 字符串
+        switch (num) {
+            case "10": console.log("字符串的10");break;
+            case 10: console.log("数字的10");
+
+        }
+        var num="10"; // 字符串
+        switch (num) {
+            case "10": console.log("------字符串的10");
+            case 10: console.log("数字的10");
+
+        }
+        // 如果多个case的代码情况一样，可以在最后一个case补上代码
+        // 判断月份对应的天数
+        var month = parseInt(prompt("请输入月份"));
+        switch (month) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:console.log("31天");break;
+            case 2:console.log("28天");break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:console.log("30天");break;
+            default:console.log("输入月份的格式不对");
+
+        }
+
+
+        /**
+         *
+         */
+    </script>
+</head>
+<body>
+
+</body>
+</html>
