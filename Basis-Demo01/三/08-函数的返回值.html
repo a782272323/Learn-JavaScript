@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Herbie Leung</title>
+    <script>
+
+        /**
+         * 函数的返回值:
+         * 在函数内部又return关键字，且关键字后面有内容，这个内容被返回
+         *
+         * set: 设置
+         * get: 获取
+         *
+         */
+
+        /**
+         * 如果一个函数有return就有返回值
+         * 没有return就没有返回值
+         * 这和java中的不一样，java void才是没有返回值
+         * 函数没有返回值，但有参数，调用时结果就是 undefined
+         * 函数里面的变量声明没有赋值，即使有返回值和带参数，结果是 undefined
+         * 函数没有明确返回值,调用时结果还是 undefined
+         * return 后面的代码不再执行了
+         *
+         * 如果一个函数有参数，那该函数就带参数
+         * 没有就不带
+         *
+         * 形参的个数和实参的个数可以不一致，也不报错，这在java中是不行的
+         *
+         */
+
+
+
+        function getSum(x, y) {
+            var sum = x + y;
+            console.log(sum);
+        }
+
+        getSum(10, 20);
+
+        // 返回值
+        function getSum1(x, y) {
+            var sum = x + y;
+            return sum;
+        }
+
+        console.log(getSum1(100, 200));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Herbie Leung</title>
+    <script>
+
+        // break 关键字:在循环中使用，遇到break，跳出当前循环
+
+        // 跳出循环
+        while (true) {
+            console.log("循环");
+            break;
+        }
+
+
+        // 只能跳出当前循环，跳不出for
+        for (var i = 0; i < 10; i++) {
+            while (true) {
+                console.log("循环");
+                break;
+            }
+        }
+        console.log("我出来了了");
+
+        // 100-200 第一个可以被7整除的数字
+        var i = 100;
+        for (; i <= 200; i++) {
+            if (i % 7 == 0) {
+                console.log(i);
+                break;
+            }
+        }
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

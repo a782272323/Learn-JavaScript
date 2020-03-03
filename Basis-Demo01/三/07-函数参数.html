@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Herbie Leung</title>
+    <script>
+
+        /**
+         * 函数参数:
+         * 在函数定义时，函数后面的小括号的变量就是参数名，目的是函数在调用时用户传参进来
+         * ja函数的参数不用声明，这点和java的不同
+         * 函数调用时候，按照提示的方式，给变量赋值，值就传给了变量
+         *
+         * 形参: 函数在定义时，小括号的变量叫做形参
+         * 实参: 函数在调用时，小括号里传入的值叫做实参,实参可以说变量也可以是值
+         */
+
+        function sum() {
+            var x = 10;
+            var y = 10;
+            var sum = x + y;
+            console.log(sum);
+        }
+        sum();
+
+        var x = 10;
+        var y = 10;
+        function sum1(x,y) {
+            var sum = x + y;
+            console.log(sum);
+        }
+        sum1(x, y);
+        sum1(100, 1);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
