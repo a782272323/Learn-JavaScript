@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Herbie Leung</title>
+    <script>
+
+        /**
+         * 作用域链
+         *
+         */
+
+        var num = 10;
+        function f1() /*// 0级作用域*/ {
+        // 1级作用域
+            var num = 20;
+            function f2() {
+                // 2级作用域
+                var num = 30;
+                function f3() {
+                    // 3级作用域
+                    var num = 40;
+                    console.log("f3被调用了");
+                    console.log(num);
+                }
+                f3();
+            }
+            f2();
+        }
+        f1();
+
+        // var num1 = 10;
+        function ff1() {
+            // var num1 = 20;
+            function ff2() {
+                // var num1 = 30;
+                function ff3() {
+                    // var num1 = 40;
+                    console.log("ff3被调用了");
+                    console.log(num1); // 报错了，num1 defined
+                }
+                ff3();
+            }
+            ff2();
+        }
+        ff1();
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

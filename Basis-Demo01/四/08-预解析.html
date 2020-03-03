@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Herbie Leung</title>
+    <script>
+        /**
+         * 预解析: 提取解析代码
+         * 把变量的声明提前了
+         *
+         * 预解析就是在解析代码，
+         * 预解析在做什么事
+         * 把变量的声明提前了，提前到当前所在作用域的最上面
+         * 函数的声明也会提前，提前到当前所在作用域的最上面
+         */
+
+        var num = 10;
+        console.log(num);
+
+        // console.log(num2); // 报错,没有声明
+
+        console.log(num1); // 没有报错 undefined
+        var num1 = 10;
+
+        var num3;
+        console.log(num3); // 没有报错 undefined
+        num3 = 120;
+
+        // f2();// 报错
+
+        function f2() {
+            console.log("xxxx");
+        }
+        f2();
+
+        f1();
+        function f1() {
+            console.log("nininis");
+        }
+
+        function f4() {
+            console.log("你"); // 为
+        }
+        f4();
+        function f4() {
+            console.log("为"); // 为
+        }
+        f4();
+
+
+        f5();
+        var num5 = 20;
+        function f5() {
+            console.log(num5); // undefine
+            var num5 = 10;
+        }
+
+        var num6 = 22;
+        function f6() {
+            console.log(num6); // 22
+        }
+        f6();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

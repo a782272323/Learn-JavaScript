@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Herbie Leung</title>
+    <script>
+        // 作用域: 使用范围
+
+        /**
+         *
+         * 1. 全局变量: 使用var 声明的变量是全局变量，不受{}的限制，全局变量可以
+         * 在页面的任何位置使用,除了函数里面声明的变量外
+         * 2. 局部变量: 在函数内部定义的变量，是局部变量，在函数外面不能使用
+         * 3. 全局变量可以在局部变量中使用，局部变量并不能在局部变量内使用.
+         * 4. 也就是说，除了函数内定义的变量是局部变量，在页面任何位置定义的变量都是全局变量
+         * 5. 全局变量，如果页面不关闭，就不会释放，占空间，消耗内存
+         * 6. 尽量使用局部变量，少使用全局变量.
+         *
+         * 7. 全局作用域: 全局变量的使用范围
+         * 8. 局部作用域: 局部变量的使用范围
+         *
+         * 9. 块级作用域:一对打括号可以看出是一块，在这对打括号里的变量使用范围
+         * 10. 仅为当前块内使用，但是这个块级作用域对js不生效，对java生效
+         * 11. 说明: js没有块级作用域
+         *
+         * 12. 隐式全局变量: 声明的变量没有var，就叫做隐式全局变量
+         * 13. 全局变量不能被delete删除，但隐式全局变量可以
+         * 14. 定义变量使用var，不会被删除，没有var就可以被删除
+         */
+
+        // 全局变量
+        var num = 10;
+        console.log(num);// 10
+
+        { // 块级别作用域
+            var num1 = 15;
+            console.log("1", num1);
+        }
+        console.log("2", num1);
+
+        if (true) {
+            var num2 = 20;
+        }
+        console.log("num2", num2);
+        for (var i = 0; i < 5; i++) {
+            var number = 22;
+        }
+        console.log("number", number);
+
+        // 局部变量
+        function f1() {
+            var num3 = 10;
+        }
+        f1();
+        // console.log(num3); // 报错，局部变量不能在函数外面使用
+
+        // 隐式全局变量
+        n11 = 100;
+        console.log("n11", n11);
+
+        function f9() {
+            n12 = 1000; // 隐式全局变量，可以被外面访问
+        }
+        f9();
+        console.log("n12", n12);
+
+        var num12 = 14;
+        num13 = 22;
+        delete num12;
+        delete num13;
+        console.log("num12", typeof num12);
+        console.log(num12 + 10);
+        console.log("num13", typeof num13);
+
+    </script>
+
+    <script>
+        console.log(num);
+        console.log("3", num1);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

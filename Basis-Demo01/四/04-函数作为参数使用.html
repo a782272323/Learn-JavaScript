@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Herbie Leung</title>
+    <script>
+
+        /**
+         * 函数的参数可以存储任何js的类型的数据
+         */
+
+        // 数字类型
+        function f1(x, y) {
+            console.log(x + y);
+        }
+        f1(20, 30);
+
+        // 字符串类型
+        function f2(x, y) {
+            console.log(x + y);
+
+        }
+        f2("梁鸿斌", " 好帅哦");
+
+        // 布尔类型
+        function f3(x, y) {
+            console.log(x);
+        }
+        f3(true);
+
+        // 函数类型,fn是变量，fn是参数，fn也是函数
+        function ff1(fn) {
+            fn();// 函数调用,fn存储的是函数/函数的代码
+        }
+        function f2() {
+            console.log("哦，猿类如此");
+        }
+        ff1(f2); // 存的是函数的代码
+        var ff2 = function () {
+            console.log("测试");
+        };
+        // 函数可以作为参数使用，如果一个函数作为参数使用，那么这个参数称为回调函数
+        // 只要是一个函数作为参数使用了，那他就是回调函数
+        ff1(ff2);
+        function sayHi(fn) {
+            console.log("您好");
+            fn();
+        }
+        function suSay() {
+            console.log("不好");
+        }
+
+        sayHi(suSay);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

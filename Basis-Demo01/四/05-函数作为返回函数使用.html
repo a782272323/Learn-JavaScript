@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Herbie Leung</title>
+    <script>
+
+        function f1() {
+            return 100;
+        }
+        console.log(f1());
+
+        // 函数是可以作为返回值使用
+        function f2() {
+            console.log("f2函数调用了");
+            return function () {
+                console.log("这是一个函数");
+            };
+        }
+        console.log(f2());
+        console.log(f2);
+        var ff = f2();
+        // ff 就是一个函数了
+        ff();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

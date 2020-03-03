@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Herbie Leung</title>
+    <script>
+        // arguments 伪数组
+
+        // 计算两个数的和
+        function f1(x, y) {
+            return x + y;
+        }
+
+        // 计算三个数的和
+        function f2(x, y, z) {
+            return x + y + z;
+
+        }
+
+        // 计算四个数的和
+        function f3(x, y, z, k) {
+            return x + y + z + k;
+        }
+
+        // 计算五个数的和
+        function f4(a, b, c, d, e) {
+            return a + b + c + d + e;
+        }
+
+        // 计算六个数的和
+        function f5(a, b, c, d, e, f) {
+            return a + b + c + d + e + f;
+        }
+
+        // 计算n个数字的和
+        function ff1() {
+            // 获取函数调用数传入了几个参数
+            console.log(arguments.length);
+            // 使用arguments对象可以获取传入每个参数的值
+            console.log(arguments);
+        }
+
+        ff1(10, 20, 30, 40);
+
+        function ff2() {
+            var sum = 0;
+            for (var i = 0; i < arguments.length; i++) {
+                sum += arguments[i];
+            }
+            return sum;
+        }
+
+        console.log(ff2(10,20,30,40));
+    </script>
+</head>
+<body>
+
+</body>
+</html>
