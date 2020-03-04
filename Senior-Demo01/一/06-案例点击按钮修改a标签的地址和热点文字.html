@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Herbie Leung</title>
+</head>
+<body>
+<input type="button" id="btn" value="显示效果"/><br>
+<a href="https://www.processon.com/" id="ak" >Processon On</a>
+<hr>
+<!-- 热点文字 -->
+<a href="http://www.bai.com">百度</a>
+
+<script>
+    // 点击按钮修改a标签的地址和热点文字
+
+    // document.getElementById("btn").onclick = function () {
+    //     // 根据id获取超链接a标签
+    //     document.getElementById("ak").href="https://www.processon.com/";
+    //     // 根据id获取超链接，设置文字内容
+    //     document.getElementById("ak").innerText = "你好，js修改成功";
+    //
+    // };
+
+    // 优化,可以感觉速度明显提升了
+    document.getElementById("btn").onclick = function () {
+        var aObj = document.getElementById("ak");
+        aObj.href = "https://www.processon.com/";
+        aObj.innerText = "优化后的";
+
+    }
+</script>
+</body>
+</html>

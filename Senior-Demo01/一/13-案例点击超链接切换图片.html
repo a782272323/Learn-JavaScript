@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Herbie Leung</title>
+    <style>
+        img {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+
+<a id="ak" href="images/xiaomai3.jpg"><img id="im" src="images/xiaomai1.jpg"/></a>
+
+<script>
+
+    document.getElementById("im").onclick = function () {
+        this.src = document.getElementById("ak").href;
+        return false;
+    };
+</script>
+</body>
+</html>

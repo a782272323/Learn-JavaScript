@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Herbie Leung</title>
+    <style>
+        img{
+            width: 200px;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+
+<img src="images/xiaomai1.jpg" alt="" id="im1"/><br><br>
+<img src="images/xiaomai2.jpg" alt="" id="im2"/><br><br>
+<img src="images/xiaomai3.jpg" alt="" id="im3"/>
+
+<script>
+
+    // document.getElementById("im1").onclick=function () {
+    //     alert("被点了")
+    // };
+    // document.getElementById("im2").onclick=function () {
+    //     alert("被点了")
+    // };
+    // document.getElementById("im3").onclick=function () {
+    //     alert("被点了")
+    // };
+
+    var imgObjs = document.getElementsByTagName("img");
+    for (var i = 0; i < imgObjs.length; i++) {
+        imgObjs[i].onclick = function () {
+            alert("hhhh");
+
+        };
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Herbie Leung</title>
+    <style>
+        div{
+            width: 200px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<input type="button" id="btn" value="设置div的样式"/>
+<div id="dv" >
+</div>
+<script src="common.js"></script>
+<script>
+    // 凡是css中这个属性是多个单词的写法，在js代码中DOM操作时，把-去掉
+    // 后面的单词首字母大写就可以了
+    my$("btn").onclick = function () {
+        my$("dv").style.width = "300px";
+        my$("dv").style.height = "200px";
+        my$("dv").style.backgroundColor = "blue";
+    };
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Herbie Leung</title>
+</head>
+<body>
+
+<input type="button" value="点菜" id="btn"/>
+<select name="" id="ss">
+    <option value="1" id="op1">麻婆豆腐</option>
+    <option value="2" id="op2">凉拌青瓜</option>
+    <option value="3" id="op3">奶香馒头</option>
+    <option value="4" id="op4">粪便</option>
+    <option value="5" id="op5">红烧肉</option>
+</select>
+<script src="common.js"></script>
+<script>
+    my$("btn").onclick = function () {
+
+        // 点击按钮选择菜
+        my$("op2").selected = true;
+    };
+</script>
+
+
+<textarea name="" id="tt" cols="30" rows="10" >
+    用户注册协议
+
+    在吗？不在
+    哦，打扰了！
+    滚？
+    骂谁呢！？！
+</textarea>
+<input type="button" id="btn2" value="注册" />
+<script>
+    // disable  属性是代表禁用的
+    my$("btn2").onclick = function () {
+        my$("tt").value = "hhhh";
+
+    };
+</script>
+</body>
+</html>

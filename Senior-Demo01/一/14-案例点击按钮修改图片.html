@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Herbie Leung</title>
+</head>
+<body>
+
+<input type="button" value="显示另外一张图片" id="btn"/>
+<img src="images/xiaomai3.jpg" alt="" id="im"/>
+
+<script>
+    // 写法一
+    // document.getElementById("btn").onclick = function () {
+    //     document.getElementById("im").src = "images/xiaomai1.jpg";
+    //
+    // };
+
+    // 写法二
+    function my$(id) {
+        return document.getElementById(id);
+    }
+
+    my$("btn").onclick = function () {
+        my$("im").src = "images/xiaomai1.jpg";
+
+    };
+</script>
+</body>
+</html>

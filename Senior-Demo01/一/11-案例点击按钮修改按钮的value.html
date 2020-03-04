@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Herbie Leung</title>
+</head>
+<body>
+
+<input type="button" value="按钮" id="btn">
+
+<script>
+    var btnObj = document.getElementById("btn");
+    btnObj.onclick = function () {
+
+        // 修改value
+        btnObj.value = "xiugai";
+
+        // 修改type
+        btnObj.type = "test";
+
+        // 修改id
+        btnObj.id = "btn2";
+    };
+</script>
+</body>
+</html>
