@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul{
+            list-style-type: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>百威</li>
+    <li>1667</li>
+    <li>哈尔滨</li>
+    <li>青岛</li>
+    <li>珠江</li>
+    <li>燕京</li>
+    <li>Rio</li>
+    <li>鸡尾酒</li>
+</ul>
+<script src="common.js"></script>
+<script>
+    // 鼠标进入和鼠标离开事件
+    var list = document.getElementsByTagName("li");
+    for (var i = 0; i < list.length; i++) {
+        // 鼠标进入
+        list[i].onmouseover = function () {
+
+            this.style.backgroundColor = "red";
+        };
+        // 鼠标离开
+        list[i].onmouseout = function () {
+            this.style.backgroundColor = "";
+        };
+    }
+
+</script>
+</body>
+</html>
