@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        /**
+         * 理论上，箭头函数就是代替了function()的声明吧
+         * 在只有一个参数的情况下，可以省略箭头函数的括号(),同时还能省略{}和return
+         * 在只有一个函数体只有一个return的情况下，可以省略{}和return
+         *
+         * 总结:
+         * ()---只有一个参数时能省略
+         * {}---你的函数体的语句只有一个return时能省略
+         * return---你的函数体的语句只有一个return时能省略
+         */
+        // window.onload = function () {
+        //     alert("lhb");
+        //
+        // };
+
+        /**
+         * 箭头函数一
+         */
+        // window.onload = () => {
+        //     alert('lhb');
+        // };
+        // let show = function () {
+        //     alert('def');
+        //
+        // };
+
+        /**
+         * 箭头函数二
+         */
+        // let show = () => {
+        //     alert('deff');
+        // }
+        // show();
+
+        //
+        // let show = function (a,b) {
+        //         alert(a + b);
+        //     };
+        // let show = (a, b) => {
+        //         alert(a + b);
+        //     }
+        // show(12, 6);
+
+
+        /**
+         * 箭头函数三
+         */
+        // let arr = [12, 5, 8, 99, 33, 14, 26];
+        // arr.sort(function (n1, n2) {
+        //     return n1 - n2;
+        // });
+        // let arr = [12, 5, 8, 99, 33, 14, 26];
+        // arr.sort((n1, n2) => {
+        //     return n1 - n2;
+        // });
+        // alert(arr);
+
+        /**
+         * 箭头函数四
+         */
+        // let show = function (a) {
+        //         return a * 2;
+        //
+        //     };
+        // let show = (a) => {
+        //
+        //         return a * 2;
+        //
+        //     };
+        // let show = a => { // 省略括号
+        //
+        //         return a * 2;
+        //
+        //     };
+        // let show = a => a * 2; // 省略{}和return
+        // alert(show(33));
+
+        /**
+         * 箭头函数五
+         */
+            // let arr = [12, 5, 8, 99, 33, 14, 26];
+            // arr.sort(function (n1, n2) {
+            //     return n1 - n2;
+            // });
+        let arr = [12, 5, 8, 99, 33, 14, 26];
+        arr.sort((n1, n2) => n1 - n2);
+        alert(arr);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

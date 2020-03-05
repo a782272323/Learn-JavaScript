@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        /**
+         *
+         * 解构赋值:
+         * 1. 左右两边结构必须一样
+         * 2. 右边必须是个合法东西(json，数组，字符串等等的格式要对应)
+         * 3. 声明和赋值不能分开（必须在一句话里完成)
+         *
+         * 解构
+         */
+    </script>
+</head>
+<body>
+
+<script>
+
+    /**
+     * 用法一
+     */
+    // let arr = [1, 2, 3];
+    // let a = arr[0];
+    // let b = arr[1];
+    // let c = arr[2];
+    // let [a, b, c] = [1, 2, 3];
+    // console.log(a, b, c);
+
+    /**
+     * 用法二（json）
+     */
+    // let {a, c, d} = {a: 12, c: 2, d: 0};
+    // console.log(a, c, d);
+
+    /**
+     * 用法三
+     */
+    // let [{a, b}, [n1, n2, n3], num, str] = [{a: 12, b: 5}, [1, 2, 3], 19, 'lhb'];
+    let [json, arr, num, str] = [{a: 12, b: 5}, [1, 2, 3], 19, 'lhb'];
+    console.log(json,arr,num,str);
+
+
+</script>
+</body>
+</html>

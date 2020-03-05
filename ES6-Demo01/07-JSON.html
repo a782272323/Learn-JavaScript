@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        /**
+         *
+         * json:
+         * 1. JSON对象
+         * json对象转换为字符串: JSON.stringify(json)
+         * 字符串转换为json对象: JSON.parse(str1)
+         * 2. 简写
+         *      名字跟值（key和value一样） 留一个
+         *      方法: 可以把function一块删除了
+         *
+         * 3. json的标准写法
+         *      i. 只能用双引号
+         *      ii. 所有的名字必须用双引号包起来
+         *      iii. 值只能用双引号包起来，或者啥也不用包
+         *      {"a": 12, "b": 5} {"a":"abc", "b": 5}
+         *
+         *
+         *
+         */
+    </script>
+</head>
+<body>
+
+<script>
+
+    /**
+     * ES6 json用法一
+     */
+    // let a = 12;
+    // let b = 5;
+    // // let json = {a: a, b: b, c: 55};
+    // // ES6 中新版写法，名字和值一样时，可以只写一个
+        // 名字跟值（key和value一样） 留一个
+    // let json = {a, b , c: 55};
+    // console.log(json);
+
+    // ES6 json用法二
+    let json = {
+        a: 12,
+        // show: function () {
+        //     alert(this.a);
+        //
+        // }
+        //    方法: 可以把function一块删除了
+        show() {
+            alert(this.a);
+
+        }
+        };
+    json.show();
+
+</script>
+
+<!-- json标准写法和转换 -->
+<script>
+    // // json对象转换为字符串:
+    // let json = {a: 12, b: 5};
+    // let str = 'http://www.baidu.com/' + encodeURIComponent(JSON.stringify(json));
+    // console.log(JSON.stringify(json));
+    // console.log(str);
+    //
+    // // 字符串转换为json对象
+    // let str1 = '{"a": 12, "b": "5", "c": "abc"}';
+    // let json1 = JSON.parse(str1);
+    // console.log(json1);
+
+</script>
+</body>
+</html>

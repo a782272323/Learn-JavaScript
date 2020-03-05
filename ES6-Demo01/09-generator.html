@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        /**
+         *
+         * 普通函数 --- 一路到底
+         * generator函数 --- 中间能停
+         */
+    </script>
+</head>
+<body>
+    
+<script>
+
+    // 这里的 * 有三种写法
+    // function* show(), function * show(), function *show()
+    function *show() {
+        alert('a');
+
+        // 暂时放弃执行
+        yield;
+
+        alert('b');
+    }
+    // generator 生成器对象
+    let genObj = show();
+    genObj.next();
+    // 把 b 放出来
+    genObj.next();
+</script>
+</body>
+</html>

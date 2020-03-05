@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        /**
+         *
+         * 数组:
+         *
+         * map --- 映射: 一个对一个
+         * 映射一:
+         * [12,58,99,86,45,91] 分数
+         * [不及格，不及格，及格，及格，不及格，及格]
+         * 映射二:
+         * [45,57,135,28] id
+         * [
+         *      {name: 'lhb', level: 0, role: 0}
+         *      {name: 'cgh', level: 1, role: 2}
+         *      {name: 'lgw', level: 2, role: 1}
+         *      {name: 'lzc', level: 3, role: 0}
+         * ]
+         *
+         * reduce --- 汇总: 一堆出来一个
+         * 计算总数
+         * [12, 8000000, 599999] => 80060011
+         * 计算平均数
+         * [10 , 20, 30] => 20
+         *
+         * filter --- 过滤器: 留一部分，拦截（删除）一部分
+         *
+         *
+         * forEach --- 迭代（循环）:
+         */
+    </script>
+</head>
+<body>
+
+<!-- map -->
+<script>
+    /**
+     * map用法1
+     */
+    // let arr = [12, 5, 8];
+    // arr.map(function (item) {
+    //     alert(item);
+    // });
+    // arr.map((item) => {
+    //     alert(item);
+    // });
+    // 最终版
+    // let result = arr.map(item => item * 2);
+    // alert(result);
+
+    /**
+     * map用法2
+     */
+    // let score = [19.85, 99, 25, 90];
+    // let result1 = score.map(item => item >= 60 ? '及格' : '不及格');
+    // alert(result1);
+
+</script>
+
+<!-- reduce -->
+<script>
+    /**
+     * reduce 用法1 计算总和
+     */
+    // let arr = [12, 69, 180, 8763];
+    // // tmp中间结果，item 是12，69这些 index是下标
+    // let result = arr.reduce((tmp,item,index) => {
+    //     return tmp + item;
+    // });
+    // alert(result); // 9025
+
+    /**
+     * reduce 用法2 计算平均数
+     */
+    // let arr = [12, 69, 180, 8764];
+    // // tmp中间结果，item 是12，69这些 index是下标
+    // let result = arr.reduce((tmp,item,index) => {
+    //     if (index == this.length-1) {
+    //         // 判断是否最后一次，不是继续求和
+    //         return tmp + item;
+    //     } else {
+    //         // 计算平均数
+    //         return (tmp + item) / arr.length;
+    //     }
+    //
+    // });
+    // alert(result);
+
+</script>
+
+<!-- filter -->
+<script>
+    /**
+     * filter 用法1, 过滤不能被3整除的数字
+     */
+    // let arr = [12, 5, 8, 99, 27, 36, 75, 11];
+    // let result = arr.filter(item => item % 3 == 0);
+    // alert(result);
+
+    /**
+     * filter 用法2
+     */
+    // let arr = [
+    //     {title: '女生衬衫', price: 75},
+    //     {title: '手表', price: 1000000},
+    //     {title: '电脑', price: 8888},
+    //     {title: '其他', price: 44422}
+    // ];
+    // let result = arr.filter(json => json.price >= 10000);
+    //
+    // console.log(result);
+
+</script>
+
+<!-- forEach -->
+<script>
+    /**
+     * forEach 用法1
+     */
+    let arr = [12, 5, 8, 9];
+    arr.forEach((item, index) => {
+        alert(index+1 + ':' + item);
+    });
+</script>
+</body>
+</html>

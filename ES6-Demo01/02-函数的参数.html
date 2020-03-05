@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        /**
+         *
+         * 函数的参数
+         * 1. 参数扩展/数组展开
+         * 2. 默认参数
+         *
+         * 参数扩展:
+         * 1. 收集剩余的参数（用法一和二）
+         *    function show(a, b, ...args){}
+         *    *Rest Parameter 必须是最后一个，以便用来接收多余的参数
+         * 2. 展开数组（用法三）
+         *    展开后的效果，跟直接把数组内容在写里面一样
+         *
+         * 默认参数（用法五）
+         * 调用时，若参数没有传值且设置了默认参数就调用默认的值，若传值且同时设置
+         * 了默认参数，调用传过来的值
+         * $('#div1').animate({width: '200px'});
+         * $('#div1').animate({width: '200px'},1000);
+         *
+         *
+         */
+    </script>
+</head>
+<body>
+
+<script>
+
+    /**
+     * 用法一
+     */
+    // function show(a, b, ...args) {
+    //     alert(a);
+    //     alert(b);
+    //     alert(args);
+    // }
+
+    // 这样子是报错的,报错原因args的必须为最后一个参数
+    // function show(a, b, ...args, c) {
+    //     alert(a);
+    //     alert(b);
+    //     alert(args);
+    //     alert(c);
+    // }
+
+    // show(12, 15, 8, 11, 33);
+
+    /**
+     * 用法二
+     */
+    // let arr = [1, 2, 3];
+    // function show(a, b, c) {
+    //     alert(a);
+    //     alert(b);
+    //     alert(c);
+    // }
+    //
+    // show(...arr);
+    // show(1, 2, 3);
+
+    /**
+     * 用法三
+     */
+    // let arr1 = [1, 2, 3];
+    // let arr2 = [5, 6, 7];
+    // let array1 = [...arr1, ...arr2];
+    // let array2 = [1, 2, 3, 5, 6, 7];
+    // // alert(array2);
+    // alert(array1);
+
+    // 下面是报错的写法, a = ...arr;是不成立的
+    // let a;
+    // let arr = [1, 2, 3];
+    // a = ...arr;
+    // alert(a);
+
+    /**
+     * 用法四
+     */
+    // function show(...args) {
+    //     fn(...args);
+    // }
+    //
+    // function fn(a, b) {
+    //     alert(a + b);
+    // }
+    // show(11, 33);
+
+    /**
+     * 用法五
+     */
+    function show(a, b = 19, c = 3) {
+        console.log(a, b, c);
+    }
+    show(100);
+    show(100, 200, 300);
+
+
+</script>
+</body>
+</html>

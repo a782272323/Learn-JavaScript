@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!-- yield 传参 -->
+<script>
+    // function *show(num1, num2) {
+    //     alert('a');
+    //     alert(`${num1},${num2}`);
+    //
+    //     let a = yield ;
+    //
+    //     alert('b');
+    //     alert(a);  // 5
+    // }
+    //
+    // let gen = show(100, 200);
+    // gen.next(12); // 这里不能给 yield传参
+    // gen.next(5); // 这里可以给 yield传参
+</script>
+
+<!-- yield 可以返回 -->
+<script>
+    // function *show() {
+    //     alert('a');
+    //
+    //     yield 12;
+    //
+    //     alert('b');
+    //     return 55;
+    // }
+    //
+    // let gen = show();
+    //
+    // let res1 = gen.next();
+    // console.log(res1); // {value: 12,done: false} 值12是field返回的，done:false表示函数未执行完
+    // let res2 = gen.next(); // {value: 55,done: true} 值55是函数show的返回值，done：true表示函数执行完
+    // console.log(res2);
+</script>
+
+<!-- field 是什么 -->
+<script>
+    // function* 炒菜(菜市场买回来的菜) {
+    //     洗菜 -> 洗好的菜
+    //
+    //     let 干净的菜 = yield 洗好的菜;
+    //
+    //     干净的菜 -> 切菜 -> 切成丝
+    //
+    //     切好的菜 -> 炒菜 -> 炒好的菜
+    //
+    //     return  炒好的菜
+    // }
+</script>
+</body>
+</html>

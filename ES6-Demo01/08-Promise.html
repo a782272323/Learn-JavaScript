@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        /**
+         *
+         * Promise --- 异步消除操作
+         * 用同步的方式书写异步代码
+         *
+         * 同步请求:
+         * 操作之间相关，同时只能做一件事
+         * 代码比异步简单
+         *
+         * 异步请求:
+         * 操作之间没有关系，同时进行多个操作
+         * 会让代码更加复杂
+         *
+         * 用法:
+         * Promise.then() 当成功了之后才进行
+         * Promise.all() 都成功才进行，失败就失败
+         * Promise.race() 同时读几个资源，谁先来用谁
+         *
+         */
+
+        /*
+        异步
+
+ajax('/banners', function(banner_data){
+	ajax('/hotItems', function(hotitem_data){
+		ajax('/slides', function(slide_data){
+			ajax('/slides', function(slide_data){
+
+			}, function(){
+			alert('读取失败');
+			});
+		}, function(){
+		alert('读取失败');
+		});
+	}, function(){
+	alert('读取失败');
+	})	;
+}, function(){
+ alert('读取失败');
+});
+
+
+同步
+let banner_data = ajax_async('/banners');
+let hotiem_data = ajax_async('/hotItems');
+let slide_data = ajax_async('/slides');
+let banner_data = ajax_async('/banners');
+         */
+    </script>
+</head>
+<body>
+<script src="jquery-3.3.1.min.js" charset="utf-8"></script>
+
+<!-- Promise 用同步方式，书写异步代码的方式 -->
+<script>
+    /**
+     * Promise 用法一
+     */
+    // let p = new Promise(function (resolve, reject) {
+    //     // 异步代码
+    //     // resolve 成功
+    //     // reject 失败
+    //     $.ajax({
+    //         url: 'data/arr.txt',
+    //         dataType: 'json',
+    //         success(arr){
+    //             resolve(arr);
+    //         },
+    //         error(err){
+    //             reject(err);
+    //         }
+    //     });
+    // });
+    //
+    // // 当p有结果之后，调用两个方法，成功或者失败
+    // p.then(function (arr){
+    //     alert('成功 '+ arr);
+    // },function (err){
+    //     alert('失败了 '+err);
+    // });
+
+    /**
+     * 用法二
+     */
+    //
+    // let p1 = new Promise(function (resolve, reject) {
+    //     $.ajax({
+    //         url: 'data/arr.txt',
+    //         dataType: 'json',
+    //         success(arr){
+    //             resolve(arr);
+    //         },
+    //         error(err){
+    //             reject(err);
+    //         }
+    //     });
+    // });
+    // let p2 = new Promise(function (resolve, reject) {
+    //     // 异步代码
+    //     // resolve 成功
+    //     // reject 失败
+    //     $.ajax({
+    //         url: 'data/json.txt',
+    //         dataType: 'json',
+    //         success(arr){
+    //             resolve(arr);
+    //         },
+    //         error(err){
+    //             reject(err);
+    //         }
+    //     });
+    // });
+    // // p1 p2都成功了才算成功
+    // Promise.all([
+    //     p1 , p2
+    // ]).then(function (arr){
+    //     // 解构赋值,arr里面有data.txt 和 json.txt的结果
+    //     let [res1,res2] = arr;
+    //
+    //     alert('全都成功了');
+    //     alert(res1);
+    //     alert(JSON.stringify(res2));
+    // }, function (){
+    //     alert('至少有一个失败了');
+    // });
+
+    /**
+     * 简化用法二
+     */
+    //
+    // function createPromise(url){
+    //     return  new Promise(function (resolve, reject) {
+    //         $.ajax({
+    //             url,
+    //             dataType: 'json',
+    //             success(arr){
+    //                 resolve(arr);
+    //             },
+    //             error(err){
+    //                 reject(err);
+    //             }
+    //         });
+    //     });
+    // }
+    // // p1 p2都成功了才算成功
+    // Promise.all([
+    //     createPromise('data/arr.txt'),
+    //     createPromise('data/json.txt')
+    // ]).then(function (arr) {
+    //     // 解构赋值,arr里面有data.txt 和 json.txt的结果
+    //     let [res1, res2] = arr;
+    //
+    //     alert('全都成功了');
+    //     alert(res1);
+    //     alert(JSON.stringify(res2));
+    // }, function () {
+    //     alert('至少有一个失败了');
+    // });
+
+    /**
+     * 最终版本
+     */
+    // jquery 里面返回的是一个Promise对象
+    // let p = $.ajax({url: 'data/arr.txt', dataType: 'json'});
+    // console.log(p);
+
+    Promise.all([
+        $.ajax({url: 'data/arr.txt', dataType: 'json'}),
+        $.ajax({url: 'data/json.txt', dataType: 'json'})
+    ]).then(result => {
+        let [arr, json] = result;
+        alert('成功了');
+        console.log(arr, json);
+    }, () => {
+        alert('失败了');
+    });
+</script>
+
+<script>
+
+</script>
+</body>
+</html>
